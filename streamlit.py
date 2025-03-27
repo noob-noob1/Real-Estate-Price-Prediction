@@ -88,11 +88,15 @@ with st.form("user_inputs"):
                             max_value=1, 
                             step=1)
     
-    # Loan Amount Term
-    Property_Age = st.number_input("Enter Property Age (Years)", 
-                               min_value=0, 
-                               max_value=120, 
-                               step=1)
+   # Calculate Property Age
+    Property_Age = Housing_Year_Sold - Year_Built
+
+    # Display Property Age as a read-only input
+    st.number_input(
+        "Property Age (Years)",
+        value=Property_Age,
+        disabled=True
+    )
     # Bungalow or not
     Bungalow = st.selectbox("Is the Property a Bungalow?", [0, 1], 
                          format_func=lambda x: "Yes" if x == 1 else "No")
