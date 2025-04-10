@@ -27,7 +27,7 @@ with st.form("user_inputs"):
     st.subheader("Housing Details")
     
     # Year sold
-    Housing_Year_Sold = st.number_input("Enter the Year House was Sold", 
+    Housing_Year_Sold = st.number_input("Enter when the Year House was Sold", 
                                     min_value=1990, 
                                     max_value=2025, 
                                     step=1)
