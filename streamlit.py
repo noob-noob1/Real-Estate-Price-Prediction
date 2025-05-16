@@ -17,7 +17,7 @@ This app predicts the price of different houses.
 #     st.stop()
 
 # Load the pre-trained model
-rf_pickle = open("models/RFmodel.pkl", "rb")
+rf_pickle = open(r"models/RFmodel.pkl", "rb")
 rf_model = pickle.load(rf_pickle)
 rf_pickle.close()
 
